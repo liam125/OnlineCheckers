@@ -1,0 +1,16 @@
+{
+	"name":"checkers",
+	"version":"0.0.1",
+	"private":"true",
+	"dependencies":{
+		"socket.io":"1.5.1",
+		"express":"4.14.0"
+
+	},
+	  "scripts": {
+    "start": "node app.js"
+  },
+
+
+
+}
