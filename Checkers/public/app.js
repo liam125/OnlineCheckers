@@ -1193,6 +1193,7 @@ function updateWinningConditions(){
 
 function createBoard(){ //This loops through 1-32 (number of white squares needed) and creates the rows of the board.
 	$('#autoJoin').hide();
+	$('#currentTurn').html("Black to move");
 	$('#checkersInstructions').css("display", "inherit");
 	$('#turnColour').css("display", "inherit");
 	if(team == "blue"){
