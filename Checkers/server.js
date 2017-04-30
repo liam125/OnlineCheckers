@@ -23,7 +23,7 @@ app.get('/', function(req, res){
 
 
 
-server.listen(8080);
+server.listen(3000);
 console.log('Ready to work');
 io.sockets.on('connection', function(socket){
 
