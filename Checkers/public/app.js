@@ -1101,23 +1101,31 @@ function checkAvailable(turn, ID, Class, direction){// this is used to check if 
 				};
 
 
+		
 				if(newID == leftRightBackDoubletake){
+
+					if($(leftRightBackDoubletake).hasClass('available') && $(leftBacktake).hasClass('available') && $(rightBacktake).hasClass('available')){
+						movePiece(start, leftRightBackDoubletake);
+						socket.emit(colorTake, {start: start, end: leftRightBackDoubletake, take: leftBackmove, secondtake: leftRightBackDoubletakeStart, user: opponent});
+						removePiece(leftBackmove);
+						removePiece(leftRightBackDoubletakeStart);
+					}
+
 					if($(leftRightBackDoubletake).hasClass('available')){
 						movePiece(start, leftRightBackDoubletake);
 						socket.emit(colorTake, {start: start, end: leftRightBackDoubletake, take: leftBackmove, secondtake: leftRightBackDoubletakeStart, user: opponent});
 						removePiece(leftBackmove);
 						removePiece(leftRightBackDoubletakeStart);
 					}					
-				};
+				
 
-				if(newID == rightLeftBackDoubletake){
 					if($(rightLeftBackDoubletake).hasClass('available')){
 						movePiece(start, rightLeftBackDoubletake);
 						socket.emit(colorTake, {start: start, end: rightLeftBackDoubletake, take: rightBackmove, secondtake: rightLeftBackDoubletakeStart, user: opponent});
 						removePiece(rightBackmove);
 						removePiece(rightLeftBackDoubletakeStart);
-					}					
-				};	
+					}	
+				};
 
 
 					clearAvailable();
