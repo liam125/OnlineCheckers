@@ -1292,7 +1292,7 @@ socket.on('users playing', function(data){
 });
 //Updates the lobby with the list of users connected
 socket.on('usernames', function(data){ 
-	$('#playInstructions').show();
+	
 	$("#lobby").html("<p class='lobbyTitle'><i class='fa fa-users' id='userIcon'></i>Name</p><p class='lobbyTitle'><i class='fa fa-toggle-down' id='statusIcon'></i>Status</p></br>");
 	
 
@@ -1470,7 +1470,8 @@ $('#submitName').click(function(){
 				$('#nickWrap').css("display", "none");
 				$('#lobby').css("visibility", "visible");
 				$('#lobbyText').css("display", "inherit");	
-				$('#autoJoin').css("display", "inherit");				
+				$('#autoJoin').css("display", "inherit");
+				$('#playInstructions').show();
 			}			
 		} else{
 			$('#nickError').html("Please enter a different username.");
