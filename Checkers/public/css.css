@@ -112,7 +112,6 @@ body {
 	height: 24px;
 	width: 200px;
 	font-size: 16px;
-	cursor: pointer;
 	display:inline-block;
 	border: 1px solid black;
 	padding-right: 5px;
@@ -125,8 +124,13 @@ body {
 
 }
 
+#autoJoin{
+	cursor: pointer;	
+}
+
 #lobby .marked{
 	float: left;
+	cursor: pointer;
 
 }
 
