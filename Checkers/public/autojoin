@@ -1139,11 +1139,11 @@ function goToLobby(){
 	$('#checkerboard').css("visibility", "hidden");
 	$('#lobby').css("display", "inherit");
 	$('#lobbyText').css("display", "inherit");
-	$('#autoJoin').css("display", "inherit");
+	//$('#autoJoin').css("display", "inherit");
 	$('#teamColour').html('');		
 	socket.emit('toLobby', {user1: username, user2: opponent});
 	waiting = false;
-	$('#autoJoin').css("display", "inherit");
+	$('#playInstructions').css("display", "inherit");
 };
 
 function showWinner(data){
@@ -1200,7 +1200,8 @@ function updateWinningConditions(){
 };	
 
 function createBoard(){ //This loops through 1-32 (number of white squares needed) and creates the rows of the board.
-	$('#autoJoin').hide();
+	//$('#autoJoin').hide();
+	$('#playInstructions').hide();
 	$('#currentTurn').html("Red to move");
 	$('#checkersInstructions').css("display", "inherit");
 	$('#turnColour').css("display", "inherit");
