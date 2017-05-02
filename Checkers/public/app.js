@@ -1471,7 +1471,7 @@ $('#submitName').click(function(){
 				$('#lobby').css("visibility", "visible");
 				$('#lobbyText').css("display", "inherit");	
 				$('#autoJoin').css("display", "inherit");
-				$('#playInstructions').show();
+				
 			}			
 		} else{
 			$('#nickError').html("Please enter a different username.");
