@@ -1143,7 +1143,7 @@ function goToLobby(){
 	$('#teamColour').html('');		
 	socket.emit('toLobby', {user1: username, user2: opponent});
 	waiting = false;
-	$('#playInstructions').css("display", "inherit");
+	//$('#playInstructions').css("display", "inherit");
 };
 
 function showWinner(data){
